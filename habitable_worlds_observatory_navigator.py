@@ -11,7 +11,7 @@ import streamlit as st
 st.header("Navigator for the Habitable Worlds Observatory(HWO):telescope:")
 
 def load_data():
-    df = pd.read_csv("../data/PSCompPars_2024.10.05_02.57.49.csv")
+    df = pd.read_csv("data/PSCompPars_2024.10.05_02.57.49.csv")
     #df = pd.read_csv("PSCompPars_2024.10.05_02.57.49.csv")
     df = df[['pl_name','hostname', 'discoverymethod', 'disc_year', 'pl_rade', 'st_rad', 'pl_orbsmax', 'sy_dist']]
     return df
@@ -103,7 +103,7 @@ with tab2:
     st.caption('Credits: Canadian Space Agency https://www.asc-csa.gc.ca/eng/about/')
     st.subheader('Distribution of Discovery methods')
     st.text('Based on NASA Exoplanet Archive data.')
-    st.image('../data/discoverymethods.png')
+    st.image('data/discoverymethods.png')
     
 with tab3:
     st.header('Most promising candidates for HWO to observe')
